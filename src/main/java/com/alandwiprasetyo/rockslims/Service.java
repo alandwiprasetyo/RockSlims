@@ -1,4 +1,4 @@
-package com.alandwiprasetyo.rockieslims;
+package com.alandwiprasetyo.rockslims;
 
 import android.util.Log;
 

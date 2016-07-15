@@ -1,4 +1,4 @@
-package com.alandwiprasetyo.rockieslims;
+package com.alandwiprasetyo.rockslims;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.client.methods.HttpGet;

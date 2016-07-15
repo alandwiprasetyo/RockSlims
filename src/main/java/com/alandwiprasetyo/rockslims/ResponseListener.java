@@ -1,4 +1,4 @@
-package com.alandwiprasetyo.rockieslims;
+package com.alandwiprasetyo.rockslims;
 
 /**
  * Created by alandwiprasetyo on 15/07/16.
