@@ -5,10 +5,11 @@ package com.alandwiprasetyo.rockieslims;
  */
 
 import android.os.AsyncTask;
-import android.util.Log;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+
 import java.util.List;
 
 public class RockTasks extends AsyncTask<String, Integer, String>  {
@@ -50,14 +51,7 @@ public class RockTasks extends AsyncTask<String, Integer, String>  {
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
-        if(result != null) {
-            Log.d("Result > ",result);
-        }
-        try {
-            delegate.resultJson(result);
-        }catch (Exception e){
-            Log.i("", "onPostExecute: "+e.getMessage());
-        }
+        delegate.resultJson(result);
     }
 
 }
