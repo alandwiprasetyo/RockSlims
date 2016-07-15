@@ -31,7 +31,6 @@ public class API extends Service implements TasksService {
         setMethod(method);
         setUrl(url);
         setHttpPost(httpPost);
-
     }
 
     @Override
@@ -47,7 +46,6 @@ public class API extends Service implements TasksService {
         setMethod(method);
         setUrl(url);
         setParams(params);
-
     }
 
     @Override

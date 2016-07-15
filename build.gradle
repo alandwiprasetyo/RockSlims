@@ -19,10 +19,35 @@ android {
     }
 }
 
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
 
 
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'rockslims'
+
+    publishedGroupId = 'com.alandwiprasetyo.rockslims'
+    libraryName = 'rockslims'
+    artifact = 'rockslims'
+
+    libraryDescription = 'A powerful android REST libaray'
+
+    siteUrl = 'https://www.alandwiprasetyo.com'
+    gitUrl = 'https://github.com/alandwiprasetyo/RockSlims.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'alandwiprasetyo'
+    developerName = 'Alan Dwi Prasetyo'
+    developerEmail = 'alandwiprasetyo@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
 }

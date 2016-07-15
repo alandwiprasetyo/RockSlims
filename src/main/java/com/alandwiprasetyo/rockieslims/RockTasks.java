@@ -11,7 +11,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import java.util.List;
 
-public class RockTasks extends AsyncTask<String, Integer, String> implements ResponseListener {
+public class RockTasks extends AsyncTask<String, Integer, String>  {
     public ResponseListener delegate =null;
     API api = new API();
     public RockTasks(int method, String url, List<NameValuePair> params, HttpGet httpGet){
@@ -60,8 +60,4 @@ public class RockTasks extends AsyncTask<String, Integer, String> implements Res
         }
     }
 
-    @Override
-    public void resultJson(String output) {
-
-    }
 }
