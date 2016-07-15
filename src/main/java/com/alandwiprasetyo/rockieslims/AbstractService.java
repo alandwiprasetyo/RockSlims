@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
- * Created by root on 16/07/16.
+ * Created by alandwiprasetyo on 16/07/16.
  */
 public abstract class AbstractService {
     public List<NameValuePair> params;

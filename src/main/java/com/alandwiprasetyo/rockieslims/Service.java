@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by root on 15/07/16.
+ * Created by alandwiprasetyo on 15/07/16.
  */
 public class Service extends AbstractService{
 
