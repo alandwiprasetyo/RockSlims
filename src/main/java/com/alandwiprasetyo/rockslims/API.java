@@ -20,31 +20,27 @@ public class API extends Service implements TasksService {
 
     @Override
     public void setData(int method, String url, List<NameValuePair> params, HttpPost httpPost) {
-        setMethod(method);
-        setUrl(url);
+        setData(method,url);
         setParams(params);
         setHttpPost(httpPost);
     }
 
     @Override
     public void setData(int method, String url, HttpPost httpPost) {
-        setMethod(method);
-        setUrl(url);
+        setData(method,url);
         setHttpPost(httpPost);
     }
 
     @Override
     public void setData(int method, String url, HttpGet httpGet) {
-        setMethod(method);
-        setUrl(url);
+        setData(method,url);
         setHttpGet(httpGet);
 
     }
 
     @Override
     public void setData(int method, String url, List<NameValuePair> params) {
-        setMethod(method);
-        setUrl(url);
+        setData(method,url);
         setParams(params);
     }
 

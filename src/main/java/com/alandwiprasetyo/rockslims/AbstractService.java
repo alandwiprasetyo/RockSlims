@@ -11,17 +11,14 @@ import java.util.List;
  * Created by alandwiprasetyo on 16/07/16.
  */
 public abstract class AbstractService {
-    public List<NameValuePair> params;
-    public HttpGet httpGet=null;
-    public HttpPost httpPost=null;
-    public  String url;
-    public int method = Method.GET;
-    static InputStream is = null;
+    List<NameValuePair> params;
+    HttpGet httpGet=null;
+    HttpPost httpPost=null;
+    String url;
+    int method = Method.GET;
+    InputStream is = null;
     String response = null;
     String message = null;
-    public AbstractService() {
-
-    }
 
     void setMethod(int method){
         this.method = method;
