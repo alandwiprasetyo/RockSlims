@@ -4,7 +4,6 @@ import android.util.Log;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
@@ -15,42 +14,14 @@ import org.apache.http.message.BasicNameValuePair;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.util.List;
 
 /**
  * Created by root on 15/07/16.
  */
-public class Service {
-    public List<NameValuePair> params;
-    public  HttpGet httpGet=null;
-    public  HttpPost httpPost=null;
-    public  String url;
-    public int method = Method.GET;
-    static InputStream is = null;
-    String response = null;
-    String message = null;
-    public Service() {
+public class Service extends AbstractService{
 
-    }
-
-    void setMethod(int method){
-        this.method = method;
-    }
-    void setHttpGet(HttpGet httpGet){
-        this.httpGet = httpGet;
-    }
-    void setHttpPost(HttpPost httpPost){
-        this.httpPost = httpPost;
-    }
-    void setUrl(String url){
-        this.url = url;
-    }
-    void setParams(List<NameValuePair> params){
-        this.params = params;
-    }
     protected void setParams(String key,String value){
         params.add(new BasicNameValuePair(key, value));
     }
