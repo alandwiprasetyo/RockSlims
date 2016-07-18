@@ -4,39 +4,21 @@ import android.util.Log;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 
 /**
  * Created by alandwiprasetyo on 15/07/16.
  */
 public class Service extends AbstractService{
 
-    protected void setParams(String key,String value){
-        params.add(new BasicNameValuePair(key, value));
-    }
-    public void setResponseCode(String response){
-        this.response = response;
-    }
-    public String getResponseCode(){
-        return response;
-    }
-    public void setResponseMessage(String message){
-        this.message = message;
-    }
-    public String getResponseMessage(){
-        return message;
-    }
     public String makeServiceCall() {
         try {
             DefaultHttpClient httpClient = new DefaultHttpClient();
@@ -49,6 +31,7 @@ public class Service extends AbstractService{
                 }
 
                 httpResponse = httpClient.execute(httpPost);
+                Log.e("Post", "URL: " + url);
 
             } else if (method == Method.GET) {
                 if (params != null) {
@@ -58,14 +41,12 @@ public class Service extends AbstractService{
                 }
                 httpGet = new HttpGet(url);
                 httpResponse = httpClient.execute(httpGet);
+                Log.e("Get", "URL: " + url);
+
             }
             httpEntity = httpResponse.getEntity();
             is = httpEntity.getContent();
 
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

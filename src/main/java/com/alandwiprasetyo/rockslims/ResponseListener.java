@@ -5,5 +5,5 @@ package com.alandwiprasetyo.rockslims;
  */
 
 public interface ResponseListener {
-    void resultJson(String output);
+    void resultJson(String output,String response,String message);
 }
